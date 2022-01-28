@@ -2,7 +2,7 @@ const APIKey = "96e6602198cf73c73eb7efc693fa0bdb";
 const testCity = "Birmingham";
 
 // Log all needed data for today in the console (except UV). 
-function getWeather (city) {
+function getOpenWeather (city) {
     const requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
     fetch(requestURL)
         .then(function (response) {
@@ -16,7 +16,23 @@ function getWeather (city) {
             const windSpeed = getWindSpeed(data);
             const latitude = data.coord.lat;
             const longitude = data.coord.lon;
+            console.log("This is the data given by the Open Weather API:")
             console.log(todayTemp, icon, humidity, windSpeed, latitude, longitude);
+            getOpenCallWeather(latitude, longitude);
+        })
+};
+
+// Log all needed data from Open Call API
+function getOpenCallWeather (latitude, longitude) {
+    console.log('This is the data from the Open Call API:')
+    console.log(latitude, longitude);
+    const requestURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=alerts,minutely,hourly&appid=${APIKey}`;
+    fetch(requestURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
         })
 };
 
@@ -43,23 +59,6 @@ function submitCity(event) {
     event.preventDefault();
     const city = $('input#city-input').val();
     console.log(city);
-    getWeather(city);
+    getOpenWeather(city);
     $('input#city-input').val("");
 }
-
-
-
-/*
-const cityFormEl = $('#city-form');
-function submitcity(event) {
-    event.preventDefault();
-    const chosencity = $('input[name="city-input"]').val();
-    console.log(chosencity);
-    $('input[name="city-input"]').val('');
-}
-
-cityFormEl.on('submit', submitcity);
-
-getWeather();
-
-*/
