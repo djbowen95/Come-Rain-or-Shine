@@ -1,10 +1,8 @@
 const APIKey = "96e6602198cf73c73eb7efc693fa0bdb";
 const testCity = "Birmingham";
-const city = testCity;
-console.log(city);
 
 // Log all needed data for today in the console (except UV). 
-function getWeather () {
+function getWeather (city) {
     const requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
     fetch(requestURL)
         .then(function (response) {
@@ -36,4 +34,32 @@ function getWindSpeed (data) {
     return milesPerHour;
 }
 
-console.log(getWeather());
+// jQuery form to retrieve user input, and get weather for location given by user. 
+const cityForm = $('#city-form');
+
+cityForm.on('submit', submitCity);
+
+function submitCity(event) {
+    event.preventDefault();
+    const city = $('input#city-input').val();
+    console.log(city);
+    getWeather(city);
+    $('input#city-input').val("");
+}
+
+
+
+/*
+const cityFormEl = $('#city-form');
+function submitcity(event) {
+    event.preventDefault();
+    const chosencity = $('input[name="city-input"]').val();
+    console.log(chosencity);
+    $('input[name="city-input"]').val('');
+}
+
+cityFormEl.on('submit', submitcity);
+
+getWeather();
+
+*/
