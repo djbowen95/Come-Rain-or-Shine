@@ -80,9 +80,16 @@ function displayCurrentWeather(collectedData) {
 
 // Function to collect forecast data for today and next 4 days
 function forecastWeatherData(data) {
-  console.log(data);
+  for (let i = 0; i < 5; i++) {
+    console.log(data.daily[i].dt);
+    console.log(data.daily[i].weather[0].icon);
+    console.log(data.daily[i].temp.day);
+    console.log(data.daily[i].wind_speed);
+    console.log(data.daily[i].humidity);
+  }
   return data;
 }
+
 
 // Function to display forecast data for today and next 4 days
 function displayWeatherForecast(weatherForecastData) {
