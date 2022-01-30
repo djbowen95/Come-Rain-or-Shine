@@ -1,5 +1,6 @@
 const APIKey = "96e6602198cf73c73eb7efc693fa0bdb";
 const testCity = "Birmingham";
+const currentWeatherElement = document.getElementById('current-weather-element');
 
 // Retrieve latitude and longitude for city input, using the Open Weather API.
 function getOpenWeather(city) {
@@ -9,7 +10,6 @@ function getOpenWeather(city) {
       return response.json();
     })
     .then(function (data) {
-        console.log(data);
       const latitude = data.coord.lat;
       const longitude = data.coord.lon;
       getOneCallWeather(latitude, longitude);
@@ -25,8 +25,10 @@ function getOneCallWeather(latitude, longitude) {
     })
     .then(function (data) {
       console.log(data);
-      const testCollect = weatherForToday(data);
-      console.log(testCollect);
+      const currentWeatherData = weatherForToday(data);
+      displayCurrentWeather(currentWeatherData);
+      const weatherForecastData = forecastWeatherData(data);
+      displayWeatherForecast(weatherForecastData);
     });
 }
 
@@ -64,4 +66,25 @@ function submitCity(event) {
   console.log(city);
   getOpenWeather(city);
   $("input#city-input").val("");
+}
+
+// Function to write today's weather to the page. 
+function displayCurrentWeather(collectedData) {
+  currentWeatherElement.innerHTML =
+    `<img src="icons/${collectedData.icon}" alt="An icon representing the weather conditions"><br>
+    Temperature: ${collectedData.temperature}<br/>
+    Humidity: ${collectedData.humidity}<br/>
+    Wind Speed: ${collectedData.windSpeed}<br/>
+    UV Index: ${collectedData.ultravioletIndex}<br/>`;
+}
+
+// Function to collect forecast data for today and next 4 days
+function forecastWeatherData(data) {
+  console.log(data);
+  return data;
+}
+
+// Function to display forecast data for today and next 4 days
+function displayWeatherForecast(weatherForecastData) {
+  console.log(weatherForecastData);
 }
