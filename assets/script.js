@@ -74,7 +74,7 @@ function submitCity(event) {
 // Function to write today's weather to the page. 
 function displayCurrentWeather(collectedData) {
   currentWeatherElement.innerHTML =
-    `<img src="icons/${collectedData.icon}" alt="An icon representing the weather conditions"><br>
+    `<img id="today-img" src="icons/${collectedData.icon}" alt="An icon representing the weather conditions"><br/>
     Temperature: ${collectedData.temperature}<br/>
     Humidity: ${collectedData.humidity}<br/>
     Wind Speed: ${collectedData.windSpeed}<br/>
@@ -112,7 +112,7 @@ function displayWeatherForecast(weatherForecastData) {
   for (let i = 0; i < forecastElements.length; i++) {
     const currentForecastElement = forecastElements[i];
     currentForecastElement.innerHTML =
-    `<img src="icons/${weatherData[i][1]}" alt="An icon representing the weather conditions"><br>
+    `<img class="forecast-img" src="icons/${weatherData[i][1]}" alt="An icon representing the weather conditions"><br>
     Temperature: ${weatherData[i][2]}<br/>
     Humidity: ${weatherData[i][3]}<br/>
     Wind Speed: ${weatherData[i][4]}<br/>`;
