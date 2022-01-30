@@ -1,3 +1,12 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+section {
+    border: 1px solid black;
+}
+
 header {
     width: 100%;
     text-align: center;
@@ -11,4 +20,16 @@ header {
 .forecast-img {
     width: 50px;
     height: 50px;
+}
+
+.top-line {
+    width: 48%;
+    display: inline-block;
+    position: relative;
+}
+
+.bottom-line {
+    width: 19%;
+    display: inline-block;
+    position: relative;
 }

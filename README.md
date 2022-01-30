@@ -8,18 +8,21 @@ A daily weather app made using the Open Weather API. Using this project to build
 - Display in the HTML
 
 ### Wednesday
-- 
+
 
 ### Thursday
-- Retrieve user input
-- Change page display based on the location picked by the user
+
 
 ### Friday
-- Responsively design website
-- Store previous searches in local storage
+- Get data for 5 future days, including UV
+- Write data, in boxes, to the HTML
+- Save icons + get them to appear in the HTML
 
 ### Saturday
-- Complete project (at least to a submittable standard)
+- Retrieve user input
+- Store previous searches in local storage
+- Change page display based on the location picked by the user
+- Design CSS (at least to a submittable standard)
 
 
 ### Full task list
@@ -29,3 +32,8 @@ A daily weather app made using the Open Weather API. Using this project to build
 - Retrieve city name, date, icon representation of weather conditions, temperature, humidity, wind speed, and UV index
 - UV index change colour based favourable, moderate or severe index.
 - Display weather cond, temperature, wind speed + humidity for past 5 days
+
+## Extra tasks
+- Would be cool to have a toggle, between Celsius and Farenheit
+- Use a google maps widget to drag and drop the exact location, give very local weather updates? 
+- Update to use jQuery
