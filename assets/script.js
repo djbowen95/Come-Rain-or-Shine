@@ -42,7 +42,7 @@ function weatherForToday(data) {
   const temperature = getTemperature(data.current.temp);
   const humidity = `${data.current.humidity}%`;
   const windSpeed = getWindSpeed(data.current.wind_speed);
-  const ultravioletIndex = 7 Math.round(data.current.uvi);
+  const ultravioletIndex = Math.round(data.current.uvi);
   return { icon: icon, temperature: temperature, humidity: humidity, windSpeed: windSpeed, ultravioletIndex: ultravioletIndex};
 }
 
