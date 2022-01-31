@@ -33,3 +33,15 @@ header {
     display: inline-block;
     position: relative;
 }
+
+#uv-element-0, #uv-element-1, #uv-element-2 {
+    background-color: lightgreen;
+}
+
+#uv-element-3, #uv-element-4, #uv-element-5 {
+    background-color: lightsalmon;
+}
+
+#uv-element-6, #uv-element-7 {
+    background-color: palevioletred;
+}

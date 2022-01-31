@@ -42,7 +42,7 @@ function weatherForToday(data) {
   const temperature = getTemperature(data.current.temp);
   const humidity = `${data.current.humidity}%`;
   const windSpeed = getWindSpeed(data.current.wind_speed);
-  const ultravioletIndex = Math.round(data.current.uvi);
+  const ultravioletIndex = 7 Math.round(data.current.uvi);
   return { icon: icon, temperature: temperature, humidity: humidity, windSpeed: windSpeed, ultravioletIndex: ultravioletIndex};
 }
 
@@ -78,7 +78,7 @@ function displayCurrentWeather(collectedData) {
     Temperature: ${collectedData.temperature}<br/>
     Humidity: ${collectedData.humidity}<br/>
     Wind Speed: ${collectedData.windSpeed}<br/>
-    UV Index: ${collectedData.ultravioletIndex}<br/>`;
+    UV Index: <span id="uv-element-${collectedData.ultravioletIndex}">${collectedData.ultravioletIndex}</span><br/>`;
 }
 
 // Function to collect forecast data for today and next 4 days
