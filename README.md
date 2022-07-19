@@ -1,5 +1,6 @@
 # Daily Weather App
-A daily weather app made using the Open Weather API. Using this project to build experience using Server-Side APIs, and improve my existing HTML, CSS and JavaScript skills.
+Come Rain or Shine is a weather dashboard that draws its data from the Open Weather API. It is a single page application that is built with responsive design in Bootstrap.js, and uses Javascript with jQuery to transform the webpage based on the data drawn from the server-side API. It was built originally for the University of Birmingham Full-Stack Coding Bootcamp.
+
 ## Task List
 ### Monday
 
