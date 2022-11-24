@@ -66,3 +66,7 @@ html, body {
 .background div:nth-of-type(9) {
     background: var(--bg-yellow-2);
 }
+
+nav {
+    position: absolute;
+}
