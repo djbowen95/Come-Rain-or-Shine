@@ -30,3 +30,39 @@ html, body {
     display: grid;
     grid-template-rows: repeat(10, 10%);
 }
+
+.background div:nth-of-type(1) {
+    background: var(--bg-yellow-10);
+}
+
+.background div:nth-of-type(2) {
+    background: var(--bg-yellow-9);
+}
+
+.background div:nth-of-type(3) {
+    background: var(--bg-yellow-8);
+}
+
+.background div:nth-of-type(4) {
+    background: var(--bg-yellow-7);
+}
+
+.background div:nth-of-type(5) {
+    background: var(--bg-yellow-6);
+}
+
+.background div:nth-of-type(6) {
+    background: var(--bg-yellow-5);
+}
+
+.background div:nth-of-type(7) {
+    background: var(--bg-yellow-4);
+}
+
+.background div:nth-of-type(8) {
+    background: var(--bg-yellow-3);
+}
+
+.background div:nth-of-type(9) {
+    background: var(--bg-yellow-2);
+}
