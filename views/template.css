@@ -1,3 +1,7 @@
+:root {
+    --bg-yellow-1: #ffea00;
+  }
+
 body {
-    background-color: #ffea00;
+    background-color: var(--bg-yellow-1);
 }
