@@ -52,6 +52,7 @@ At this point I will want to come up with a new plan, but what is left to do is:
  - Style the above
  - Bonus: I'd love a Celsius / Farenheit toggle. Can do this with the OpenWeather API.
  - Bonus 2: Want to store previous location searches if possible - is this better in localStorage or react state?
+ - Bonus 3: I should really make a favicon!
 
 ## Branch 3?: Main ring - content design
  - Go through data and decide if want 4 or 6 rectangles
