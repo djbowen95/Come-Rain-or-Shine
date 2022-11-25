@@ -67,6 +67,15 @@ html, body {
     background: var(--bg-yellow-2);
 }
 
-nav {
+nav ul {
     position: absolute;
+    display: flex;
+    background-color: var(--fg-blue-1);
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 10px;
 }
