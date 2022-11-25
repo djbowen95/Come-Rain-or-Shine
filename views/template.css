@@ -87,3 +87,7 @@ nav ul li a {
     color: var(--default-white);
     text-shadow: 1px 1px 3px var(--default-black);
 }
+
+nav ul li a:hover {
+    color: var(--fg-blue-3); /*Not sure about this colour */
+}
