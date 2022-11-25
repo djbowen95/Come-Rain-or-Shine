@@ -70,12 +70,12 @@ html, body {
 nav ul {
     position: absolute;
     display: flex;
-    background-color: var(--fg-blue-1);
     margin: 0;
-    padding: 0;
+    padding: 4px;
+    border: solid var(--default-white) 2px;
 }
 
 nav ul li {
     list-style: none;
-    margin-right: 10px;
+    margin: 0px 5px 0px 5px;
 }
