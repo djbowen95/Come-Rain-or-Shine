@@ -22,7 +22,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif; /* Want to change this */
 }
 
-.background {
+.block-gradient {
     background-color: var(--bg-yellow-1);
     position: absolute;
     width: 100%;
@@ -32,39 +32,39 @@ html, body {
     grid-template-rows: repeat(10, 10%);
 }
 
-.background div:nth-of-type(1) {
+.block-gradient div:nth-of-type(1) {
     background: var(--bg-yellow-10);
 }
 
-.background div:nth-of-type(2) {
+.block-gradient div:nth-of-type(2) {
     background: var(--bg-yellow-9);
 }
 
-.background div:nth-of-type(3) {
+.block-gradient div:nth-of-type(3) {
     background: var(--bg-yellow-8);
 }
 
-.background div:nth-of-type(4) {
+.block-gradient div:nth-of-type(4) {
     background: var(--bg-yellow-7);
 }
 
-.background div:nth-of-type(5) {
+.block-gradient div:nth-of-type(5) {
     background: var(--bg-yellow-6);
 }
 
-.background div:nth-of-type(6) {
+.block-gradient div:nth-of-type(6) {
     background: var(--bg-yellow-5);
 }
 
-.background div:nth-of-type(7) {
+.block-gradient div:nth-of-type(7) {
     background: var(--bg-yellow-4);
 }
 
-.background div:nth-of-type(8) {
+.block-gradient div:nth-of-type(8) {
     background: var(--bg-yellow-3);
 }
 
-.background div:nth-of-type(9) {
+.block-gradient div:nth-of-type(9) {
     background: var(--bg-yellow-2);
 }
 
