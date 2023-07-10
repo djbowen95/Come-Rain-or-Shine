@@ -86,20 +86,25 @@ html, body {
 }
 
 .sun {
-    /* flex-grow: 1;
-    aspect-ratio: 1 / 1; */
-    height: 80vh;
-    width: 80vh;
+    flex-grow: 8;
+    max-width: 80vh;
+    aspect-ratio: 1 / 1;
     background-color: black;
     border-radius: 50%;
 }
 
-/* .space {
-    height: 20vh;
-    width: 10vh;
-    background-color: purple;
-} */
+.space {
+    flex-grow: 1;
+}
 
+@media (orientation:portrait) {
+    .center-circle {
+        flex-direction: row;
+    }
+    .space {
+        flex-grow: 0.5;
+    }
+}
 
 nav ul {
     position: absolute;
