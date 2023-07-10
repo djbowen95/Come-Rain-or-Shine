@@ -89,5 +89,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--fg-blue-3); /*Not sure about this colour */
+    color: #e2e2e2; /*Not sure about this colour */
 }
