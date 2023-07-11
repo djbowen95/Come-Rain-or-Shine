@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --bg-yellow-1: #ffea00;
+    --bg-yellow-2: #ffdd00;
+    --bg-yellow-3: #ffd000;
+    --bg-yellow-4: #ffc300;
+    --bg-yellow-5: #ffb700;
+    --bg-yellow-6: #ffaa00;
+    --bg-yellow-7: #ffa200;
+    --bg-yellow-8: #ff9500;
+    --bg-yellow-9: #ff8800;
+    --bg-yellow-10: #ff7b00;
+    --fg-blue-1: #00509d;
+    --fg-blue-2: #003f88;
+    --fg-blue-3: #00296b;
+    --default-white: #fffceb;
+    --default-black:#000814;
+  }
+
+*, html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Want to change this */
+}
