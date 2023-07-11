@@ -18,7 +18,7 @@
     --default-black:#000814;
   }
 
-html, body {
+*, html, body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif; /* Want to change this */
@@ -92,6 +92,8 @@ html, body {
     aspect-ratio: 1 / 1;
     background-color: var(--bg-yellow-3);
     border-radius: 50%;
+    box-shadow: 8px 8px 64px var(--bg-yellow-9);
+
 }
 
 .space {
@@ -132,3 +134,22 @@ nav ul li a {
 nav ul li a:hover {
     color: #e2e2e2;
 }
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+footer h1 {
+    font-family: 'Pacifico', Times, serif;
+    color: var(--fg-blue-3);
+    font-size: 3em;
+    font-style: italic;
+    text-shadow: 0.15em 0.15em white;
+    padding: 0px 0.15em 1em 0px;
+}
+
+/* Media query for breaking point of font - try to find it relative */
