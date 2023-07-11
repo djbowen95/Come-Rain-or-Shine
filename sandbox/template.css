@@ -162,6 +162,8 @@ footer h1 {
     margin: 0px;
 }
 
-.content-container div {
+.content-container section, .content-container article, .content-container div {
     border: 2px solid white;
+    margin: 2px;
+    padding: 2px;
 }
