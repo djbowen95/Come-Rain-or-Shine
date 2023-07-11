@@ -45,6 +45,7 @@ footer h1 {
 
 /* Media query for breaking point of font needed - try to find it relative */
 
+/* MAIN - SEARCH BAR AND TODAY'S WEATHER */
 main {
     position: absolute;
     height: 100vh;
@@ -62,7 +63,7 @@ margin: 2px;
     padding: 2px; 
 }
 
-.central-container {
+.central-container { /* Do I still need this? */
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     display: flex;
@@ -91,15 +92,18 @@ margin: 2px;
     grid-column: 1 / span 2;
 }
 
+/* ASIDE - FUTURE WEATHER FORECAST */
 aside {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 3;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
 }
 
-aside article {
+.future-block, .header-block {
     border: 1px solid white;
     width: 15vh;
     min-height: 8vh;
@@ -110,13 +114,9 @@ aside article {
     text-shadow: 1px 1px 3px var(--default-black);
     font-size: 0.6em;
     aspect-ratio: 1 / 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    overflow: hidden;
 }
 
-aside article:nth-of-type(1) {
+.header-block {
     background-color: var(--bg-yellow-9);
     display: flex;
     justify-content: center;
@@ -135,22 +135,54 @@ aside h2 {
     color: var(--default-white);
 }
 
-aside article:nth-of-type(2) {
+aside section:nth-of-type(2) {
     background-color: var(--bg-yellow-8);
 }
 
-aside article:nth-of-type(3) {
+aside section:nth-of-type(3) {
     background-color: var(--bg-yellow-7);
 }
 
-aside article:nth-of-type(4) {
+aside section:nth-of-type(4) {
     background-color: var(--bg-yellow-5);
 }
 
-aside article:nth-of-type(5) {
+aside section:nth-of-type(5) {
     background-color: var(--bg-yellow-4);
 }
 
-aside article:nth-of-type(6) {
+aside section:nth-of-type(6) {
     background-color: var(--bg-yellow-3);
+}
+
+.future-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    overflow: hidden;
+}
+
+.future-block section {
+    border: 1px solid white;
+    padding: 2px;
+}
+
+.day-marker {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    padding-top: 4px;
+}
+
+.future-block .icon {
+    grid-column: 1;
+    grid-row: 4 / span 3;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.temp-marker, .humidity-marker, .windspeed-marker {
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
 }

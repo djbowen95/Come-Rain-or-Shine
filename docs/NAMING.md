@@ -13,3 +13,5 @@ figure....
 Is there a way to unit test this (either manually or automated?) - would be cool to learn! Also test using other accessibility tools (and chronicle?)
 
 changed around commit 63/64 - as incorporating figure
+
+MIGHT WANT TO DELETE 'today-block' id
