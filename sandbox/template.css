@@ -110,6 +110,7 @@
     }
 }
 
+/* NAVIGATION */
 nav ul {
     position: absolute;
     display: flex;
@@ -135,6 +136,8 @@ nav ul li a:hover {
     color: #e2e2e2;
 }
 
+/* FOOTER */
+/* Note - this is sort of a background element - unsure if it might be better to treat it as such, ie no semantic HTML. */
 footer {
     position: absolute;
     bottom: 0px;
@@ -152,9 +155,9 @@ footer h1 {
     padding: 0px 0.15em 1em 0px;
 }
 
-/* Media query for breaking point of font - try to find it relative */
+/* Media query for breaking point of font needed - try to find it relative */
 
-.content-container {
+main {
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -165,7 +168,7 @@ footer h1 {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.content-container section, .content-container article, .content-container div {
+main section, main article, main div {
     border: 1px solid white;
 margin: 2px;
     padding: 2px; 
@@ -200,7 +203,7 @@ margin: 2px;
     grid-column: 1 / span 2;
 }
 
-.future-weather {
+aside {
     grid-column: 3 / span 1;
     grid-row: 1 / span 3;
     display: flex;
@@ -208,7 +211,7 @@ margin: 2px;
     align-items: end;
 }
 
-.future-weather article {
+aside article {
     border: 1px solid white;
     width: 15vh;
     min-height: 8vh;
@@ -225,7 +228,7 @@ margin: 2px;
     overflow: hidden;
 }
 
-.future-weather article:nth-of-type(1) {
+aside article:nth-of-type(1) {
     background-color: var(--bg-yellow-9);
     display: flex;
     justify-content: center;
@@ -237,29 +240,29 @@ margin: 2px;
     font-size: 1em;
 }
 
-.future-weather h1 {
+aside h2 {
     text-shadow: 1px 1px 3px var(--default-black);
     font-size: 1em;
     font-weight: normal;
     color: var(--default-white);
 }
 
-.future-weather article:nth-of-type(2) {
+aside article:nth-of-type(2) {
     background-color: var(--bg-yellow-8);
 }
 
-.future-weather article:nth-of-type(3) {
+aside article:nth-of-type(3) {
     background-color: var(--bg-yellow-7);
 }
 
-.future-weather article:nth-of-type(4) {
+aside article:nth-of-type(4) {
     background-color: var(--bg-yellow-5);
 }
 
-.future-weather article:nth-of-type(5) {
+aside article:nth-of-type(5) {
     background-color: var(--bg-yellow-4);
 }
 
-.future-weather article:nth-of-type(6) {
+aside article:nth-of-type(6) {
     background-color: var(--bg-yellow-3);
 }
