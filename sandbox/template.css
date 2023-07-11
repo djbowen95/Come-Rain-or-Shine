@@ -156,14 +156,50 @@ footer h1 {
 
 .content-container {
     position: absolute;
-    background-color: green;
     height: 100vh;
     width: 100vw;
     margin: 0px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .content-container section, .content-container article, .content-container div {
     border: 2px solid white;
     margin: 2px;
     padding: 2px;
+}
+
+.central-container {
+    grid-column: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.today-weather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.today-header {
+    grid-column: 1 / span 2;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.search-header {
+    grid-column: 1 / span 2;
+}
+
+.search-previous {
+    grid-column: 1 / span 2;
+}
+
+.future-weather {
+    background-color: blue;
+    grid-column: 3 / span 1;
 }
