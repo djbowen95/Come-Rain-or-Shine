@@ -222,6 +222,7 @@ margin: 2px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    overflow: hidden;
 }
 
 .future-weather article:nth-of-type(1) {
