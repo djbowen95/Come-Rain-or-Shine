@@ -153,3 +153,15 @@ footer h1 {
 }
 
 /* Media query for breaking point of font - try to find it relative */
+
+.content-container {
+    position: absolute;
+    background-color: green;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+}
+
+.content-container div {
+    border: 2px solid white;
+}
