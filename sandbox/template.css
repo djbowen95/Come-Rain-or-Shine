@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 :root {
     --bg-yellow-1: #ffea00;
     --bg-yellow-2: #ffdd00;
@@ -128,5 +130,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e2e2e2; /*Not sure about this colour */
+    color: #e2e2e2;
 }
