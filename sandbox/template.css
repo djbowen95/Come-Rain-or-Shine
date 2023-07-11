@@ -87,9 +87,8 @@ html, body {
 
 .sun {
     flex-grow: 8;
-    max-width: 80vh;
     aspect-ratio: 1 / 1;
-    background-color: black;
+    background-color: var(--bg-yellow-3);
     border-radius: 50%;
 }
 
@@ -97,6 +96,7 @@ html, body {
     flex-grow: 1;
 }
 
+/* Rotates the flexbox action if height becomes greater than width */
 @media (orientation:portrait) {
     .center-circle {
         flex-direction: row;
