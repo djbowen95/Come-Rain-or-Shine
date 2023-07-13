@@ -99,17 +99,41 @@ main section, main article, main div {
     grid-column: 1 / span 2;
 }
 
-.search-box {
+.search-box form{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0px 8px;
+    color: var(--default-white);
 }
 
-.search-header {
+#search-input-label{
+    font-size: 0.6em;
     grid-column: 1 / span 2;
+    display: flex;
+    align-items: flex-end;
 }
 
 .search-previous {
     grid-column: 1 / span 2;
+}
+
+.search-box h3 {
+    color: var(--default-white);
+    font-size: 0.7em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 1px 2px var(--default-black);
+}
+
+.search-box h3 a {
+    color: #e2e2e2;
+    text-shadow: 1px 1px 2px var(--default-black);
+}
+
+.search-box h3 a:hover{
+    color: var(--fg-blue-1);
 }
 
 /* ASIDE - FUTURE WEATHER FORECAST */

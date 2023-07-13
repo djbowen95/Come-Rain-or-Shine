@@ -56,7 +56,7 @@
 
     <main>
       <section class="left-container">
-        <section class="sunrise-space">Hi</section>
+        <section class="sunrise-space"></section>
         <figure id="sunrise">
           <img src="../icons/sunrise.png" alt="Sunrise">
           <figcaption><ins>7:00am</ins></figcaption>
@@ -81,14 +81,19 @@
         </section>
 
         <section class="search-box">
-          <article class="search-header"><h1>Search Box Header</h1></article>
-          <article>
-            <div>Search Box</div>
-            <div>Button</div>
-          </article>
-          <article class="search-previous">
-            <div>Previous Searches: Rome, Paris, France</div>
-          </article>
+          <header>
+            <h2>Find Your City: </h2>
+          </header>
+
+          <form>
+            <label for="search-box-input" display="none" id="search-input-label">Search Here: </label>
+            <input type="text" name="search-box-input" id="search-box-input">
+            <button type="submit" id="search-box-button">Go!</button>
+          </form>
+
+          <section class="search-previous">
+            <h3>Previous Searches: <a href="">Rome</a>, <a href="">Paris</a>, <a href="">Milan</a>.</h3>
+          </section>
         </section>
       </section>
 
