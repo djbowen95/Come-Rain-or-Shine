@@ -5,6 +5,7 @@ nav ul {
     margin: 5px;
     padding: 4px;
     border: solid var(--default-white) 2px;
+    border-radius: 2px;
     box-shadow: 2px 1px 4px var(--default-black);
     letter-spacing: 0.8px;
 }
@@ -57,12 +58,6 @@ main {
     grid-template-rows: repeat(3, 1fr);
 }
 
-main section {
-    border: 1px solid white;
-    margin: 2px;
-    padding: 2px; 
-}
-
 .left-container {
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
@@ -103,7 +98,10 @@ main section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: rgba(255, 255, 255, 0.4);
-    margin-top: 20vh;
+    margin-top: 18vh;
+    padding: 4px 16px;
+    border: 2px solid white;
+    border-radius: 2px;
 }
 
 .today-display header {
@@ -146,6 +144,8 @@ main section {
     background-color: rgba(255, 255, 255, 0.4);
     margin-top: 4px;
     margin-bottom: 8em;
+    border: 2px solid white;
+    border-radius: 2px;
 }
 
 .search-box form{
@@ -201,6 +201,7 @@ aside {
 
 .future-block, .header-block {
     border: 1px solid white;
+    border-radius: 2px;
     width: 15vh;
     min-height: 8vh;
     margin: 1vh 2vh;
@@ -219,6 +220,7 @@ aside {
     align-items: center;
     text-align: center;
     border: solid var(--default-white) 2px;
+    border-radius: 2px;
     box-shadow: 2px 1px 4px var(--default-black);
     letter-spacing: 0.8px;
     font-size: 1em;
@@ -293,7 +295,6 @@ aside h2 {
     grid-row: span 1;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--default-white);
     border-left: 1px solid var(--default-white);
     padding: 2px;
 }
