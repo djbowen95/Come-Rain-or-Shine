@@ -57,14 +57,23 @@ main {
     grid-template-rows: repeat(3, 1fr);
 }
 
-main section, main article, main div {
+main section {
     border: 1px solid white;
     margin: 2px;
     padding: 2px; 
 }
 
+.left-container {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+}
+
+.right-container {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+}
+
 .left-container, .right-container {
-    grid-row: 2 / span 1; 
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -93,10 +102,42 @@ main section, main article, main div {
 .today-display {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
-.today-header {
+.today-display header {
     grid-column: 1 / span 2;
+}
+
+.today-display figure {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.today-display img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.today-display figcaption {
+    font-size: 0.8em;
+    margin-top: 4px;
+}
+
+#today-data h4{
+    font-size: 0.8em;
+}
+
+.marker {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box { 
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 4px;
 }
 
 .search-box form{
