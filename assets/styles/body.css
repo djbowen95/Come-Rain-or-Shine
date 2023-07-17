@@ -1,6 +1,7 @@
 /* NAVIGATION */
 nav ul {
     position: absolute;
+    z-index: 2;
     display: flex;
     margin: 5px;
     padding: 4px;
@@ -28,6 +29,7 @@ nav ul li a:hover {
 /* FOOTER */
 /* Note - this is sort of a background element - unsure if it might be better to treat it as such, ie no semantic HTML. */
 footer {
+    z-index: -1;
     position: absolute;
     bottom: 0px;
     width: 100vw;
@@ -36,6 +38,7 @@ footer {
 }
 
 footer h1 {
+    z-index: -1;
     font-family: 'Pacifico', Times, serif;
     color: var(--fg-blue-3);
     font-size: max(10vh, 20px);
@@ -49,6 +52,7 @@ footer h1 {
 
 /* MAIN - SEARCH BAR AND TODAY'S WEATHER */
 main {
+    z-index: 1;
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -225,6 +229,7 @@ main {
 
 /* ASIDE - FUTURE WEATHER FORECAST */
 aside {
+    z-index: 0;
     position: absolute;
     height: 100vh;
     width: 100vw;
