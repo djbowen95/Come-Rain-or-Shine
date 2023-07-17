@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Wont ever get bigger than 100px or 10vh */
+h1 {
+    font-size: min(100px, 10vh);
+}
+
+/* Wont ever get smaller that 16px or 6vh */
+p {
+    font-size: max(16px, 6vh);
+}
