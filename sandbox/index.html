@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Daily Weather App</title>
+  </head>
+
+  <body>
+    <header>
+        <h1>Daily Weather App!</h1>
+    </header>
+
+    <section id="input-container" class="top-line">
+        <h2>Search Box</h2>
+        <h3>Where would you like to go?</h3>
+        <form id="city-form">
+            <input type="text" class="form-input w-100" id="city-input" name="city-input" placeholder="Enter your city" />
+            <br/>
+            <button class="btn btn-info" id="submit-button">Search for city!</button>
+          </form>
+        <h3>Previous searches</h3>
+        <li id="previous-cities">
+        </li>
+    </section>
+
+    <section id="current-weather-container"  class="top-line">
+        <article>
+            <h2>The Current Weather</h2>
+            <p id="current-weather-element"></p>
+        </article>
+    </section>
+    <br/>
+
+    <section id="forecast-container"></section>
+
+        <article class="bottom-line">
+            <h2>Today's Average</h2>
+            <p id="forecast-0"></p>
+        </article>
+
+        <article class="bottom-line">
+            <h2>Tomorrow's Weather</h2>
+            <p id="forecast-1"></p>
+        </article>
+
+        <article class="bottom-line">
+            <h2>The Day After's Weather</h2>
+            <p id="forecast-2"></p>
+        </article>
+
+        <article class="bottom-line">
+            <h2>The Day After That!</h2>
+            <p id="forecast-3"></p>
+        </article>
+
+        <article class="bottom-line">
+            <h2>The Day After That!!</h2>
+            <p id="forecast-4"></p>
+        </article>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
