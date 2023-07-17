@@ -38,11 +38,11 @@ footer {
 footer h1 {
     font-family: 'Pacifico', Times, serif;
     color: var(--fg-blue-3);
-    font-size: 3em;
+    font-size: max(10vh, 20px);
     font-style: italic;
     text-shadow: 0.15em 0.15em white;
     /* padding: 0px 0.15em 1em 0px; */
-    padding: 0px 1vw 1em 0px;
+    padding: 0px 1vw 8vh 0px;
 }
 
 /* Media query for breaking point of font needed - try to find it relative */
@@ -121,8 +121,7 @@ main {
 }
 
 .today-display figure {
-    margin-left: 8px;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,8 +165,7 @@ main {
 }
 
 .search-box { 
-    flex-shrink: 1;
-    flex-grow: 1;
+    padding: 4px 16px;
     background-color: rgba(255, 255, 255, 0.4);
     margin-top: 6px;
     margin-bottom: 8em;
@@ -176,12 +174,18 @@ main {
     box-shadow: 2px 2px 4px var(--default-black);
 }
 
+.search-box h3 {
+    font-size: max(14px, 4vh);
+    margin-bottom: 4px;
+}
+
 .search-box form{
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin: -8px 8px -2px 8px;
     color: var(--default-white);
+    margin-bottom: 4px;
 }
 
 #search-input-label{
@@ -191,6 +195,9 @@ main {
     align-items: flex-end;
 }
 
+#search-box-input {
+    height: max(1em, 3vh);
+}
 .search-previous {
     grid-column: 1 / span 2;
 }
@@ -325,4 +332,10 @@ aside h2 {
     align-items: center;
     border-left: 1px solid var(--default-white);
     padding: 2px;
+}
+
+@media only screen and (max-height: 300px) {
+    .today-display figcaption{
+        display: none;
+        }
 }
