@@ -5,6 +5,16 @@ console.log("API Key is: " + APIKey);
 
 // Fetch the longitude / latitude when given a city name.
 function getLongLat(city) {
+    const requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
+    fetch(requestURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        const latitude = data.coord.lat;
+        const longitude = data.coord.lon;
+        console.log(latitude, longitude);
+      });
     return {longitude: 0.4, latitude: 0.6}
 } 
 
