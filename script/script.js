@@ -33,6 +33,7 @@ function getOneCallWeather(latitude, longitude) {
   return requestURL;
 }
 
+// Extracts the required data from the response recieved, and passes it through to display function.
 function processCurrentWeather(data) {
   const today = {
     icon: data.current.weather[0].icon,
@@ -45,6 +46,7 @@ function processCurrentWeather(data) {
   displayCurrent(today);
 }
 
+// Uses jQuery to insert today's weather data into html elements.
 function displayCurrent(today) {
   
   $('.today-display img').attr('src', `../icons/${today.icon}.png`);
@@ -56,7 +58,20 @@ function displayCurrent(today) {
   return;
 }
 
+// Iterates through weather for next five days, logs to the console.
 function processForecast (data) {
+  for (let i = 0; i < 5; i++) {
+    const current = {
+      unixDate: data.daily[i].dt,
+      icon: data.daily[i].weather[0].icon,
+      temp: data.daily[i].temp.day,
+      humidity: data.daily[i].humidity,
+      wind_speed: data.daily[i].wind_speed,
+    }
+
+    console.log("Day" + i);
+    console.log(current);
+  }
   return;
 }
 
