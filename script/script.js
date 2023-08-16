@@ -41,6 +41,8 @@ function displayCurrentWeather(data) {
     uvi: data.current.uvi,
   };
 
+  $('.today-display img').attr('src', `../icons/${today.icon}.png`);
+  console.log("Hello World");
   console.log(today);
 }
 
