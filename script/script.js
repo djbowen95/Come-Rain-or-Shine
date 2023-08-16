@@ -14,7 +14,7 @@ function getLongLat(city) {
       getOneCallWeather(latitude, longitude);
     });
 
-  return LongLat;
+  return requestURL;
 }
 
 // This second API call is the one we use for the weather data.
@@ -26,28 +26,48 @@ function getOneCallWeather(latitude, longitude) {
       return response.json();
     })
     .then(function (data) {
-      displayCurrentWeather(data);
+      processCurrentWeather(data);
+      processForecast(data);
     });
 
   return requestURL;
 }
 
-function displayCurrentWeather(data) {
+function processCurrentWeather(data) {
   const today = {
     icon: data.current.weather[0].icon,
-    temperature: data.current.temp,
+    temp: data.current.temp,
     humidity: data.current.humidity,
     wind_speed: data.current.wind_speed,
     uvi: data.current.uvi,
   };
 
-  $('.today-display img').attr('src', `../icons/${today.icon}.png`);
-  console.log("Hello World");
-  console.log(today);
+  displayCurrent(today);
 }
 
-// function forecastWeather (data) {
-//   console.log("Hello World")
-//   }
+function displayCurrent(today) {
+  
+  $('.today-display img').attr('src', `../icons/${today.icon}.png`);
+  $('.today-display .temp .marker').text(`${convertTemp(today.temp)}`);
+  $('.today-display .humidity .marker').text(`${today.humidity}%`);
+  $('.today-display .wind-speed .marker').text(`${convertWindSpeed(today.wind_speed)}`);
+  $('.today-tisplay .uv-index').text(`${today.uvi}`);
+  
+  return;
+}
+
+function processForecast (data) {
+  return;
+}
+
+function convertTemp (temp) {
+  const celsius = Math.round(temp - 273.15);
+  return `${celsius}°C`
+}
+
+function convertWindSpeed(wind_speed) {
+  const mph = Number.parseFloat(wind_speed / 0.44704).toFixed(2);
+  return `${mph}mph`;
+}
 
 console.log(getLongLat("Birmingham"));
