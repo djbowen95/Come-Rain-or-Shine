@@ -69,10 +69,20 @@ function processForecast (data) {
       wind_speed: data.daily[i].wind_speed,
     }
 
-    console.log("Day" + i);
-    console.log(current);
+    displayForecast(i, current);
   }
+
   return;
+}
+
+function displayForecast(index, current) {
+
+$(`#future-block-${index} img`).attr('src', `../icons/${current.icon}.png`);
+$(`#future-block-${index} .temp-marker`).text(`${convertTemp(current.temp)}`);
+$(`#future-block-${index} .humidity-marker`).text(`${current.humidity}%`);
+$(`#future-block-${index} .windspeed-marker`).text(`${convertWindSpeed(current.wind_speed)}`);
+
+return;
 }
 
 function convertTemp (temp) {
@@ -85,4 +95,4 @@ function convertWindSpeed(wind_speed) {
   return `${mph}mph`;
 }
 
-console.log(getLongLat("Birmingham"));
+getLongLat("Birmingham");
